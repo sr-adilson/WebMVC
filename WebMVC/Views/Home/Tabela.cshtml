@@ -1,0 +1,28 @@
+﻿@model List<WebMVC.Models.Whisky>
+@{
+    ViewBag.Title = "Tabela";
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Bebidas</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var w in Model)
+        {
+        <tr>
+            <td>@w.Id</td>
+            <td>@w.Bebida</td>
+            <td>
+                <a href="/Home/Editar/@w.Id">Editar</a>
+                <a href="/Home/Deletar/@w.Id">Deletar</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<a href="/Home/Index">Home</a>

@@ -1,0 +1,17 @@
+﻿@model WebMVC.Models.Whisky
+@{
+    ViewBag.Title = "Editar";
+}
+
+<form action="/Home/Editar" method="post">
+
+    <a href="Index">Home</a>
+    <h1>Cadatrar de Bebidas</h1>
+    ID:
+    <input id="id" type="number" name="Id" value="@Model.Id" readonly="readonly"/>
+    <br />
+    Bebida:
+    <input id="nome" type="text" name="Bebida" value="@Model.Bebida"/>
+    <br />
+    <input type="submit" name="salvar" value="Salvar" />
+</form>
